@@ -28,13 +28,12 @@ while is_race_on:
 
     for turtle in turtle_players:
         if turtle.xcor() > 230:
+            is_race_on = False
             winning_color = turtle.pencolor()
             if winning_color == user_bet:
                 print("You've won the race!")
-                is_race_on = False
             else:
                 print("You've lost the race...")
-                is_race_on = False
         random_distance = random.randint(0, 10)
         turtle.forward(random_distance)
 
